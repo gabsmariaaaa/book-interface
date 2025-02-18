@@ -1,0 +1,457 @@
+/* Div para o fundo */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #9D9797; /* Cor de fundo */
+  
+}
+
+/* Estilos gerais para o layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.main {
+  margin-top: 50px; /* Diminui o espaço entre o container e o main */
+  width: 100%;
+}
+
+.titulolivro {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Container para centralizar a tabela */
+.tabelaContainer {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto; /* Isso centraliza a tabela horizontalmente */
+}
+
+/* Estilo da tabela */
+.livrosTabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Cabeçalho da tabela */
+.livrosTabela th,
+.livrosTabela td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+/* Cabeçalho */
+.livrosTabela th {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ccc; /* Cor de fundo cinza claro */
+  color: #000; /* Cor do texto preta */
+}
+
+/* Células de dados */
+.livrosTabela td {
+  font-size: 14px;
+}
+
+/* Estilo dos botões */
+/* Estilo base dos botões */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #fff; 
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  outline: none;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+  background-color: #fff; /* Azul mais escuro */
+  transform: scale(1.05); /* Leve aumento para dar destaque */
+}
+
+/* Efeito ao clicar */
+button:active {
+  transform: scale(0.95); /* Simula um "pressionado" ao clicar */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade: ajusta o tamanho do botão em telas menores */
+@media (max-width: 600px) {
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+.modal-delete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #bbb;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 3px solid #000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-delete .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.modal-delete .modal-content h2 {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.modal-delete p {
+  color: #000;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo padrão dos botões do modal: fundo branco, texto preto */
+.modal-delete button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000; /* Borda preta para realçar o botão */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ao passar o mouse, o botão muda para fundo vermelho e texto branco */
+.modal-delete button:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Layout dos botões (caso sejam vários, alinhados horizontalmente) */
+.modal-delete .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Remove a setinha do input tipo número */
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centraliza o título */
+  align-items: center;
+  padding: 10px 0;
+}
+
+.titulolivro {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Posiciona a section com o botão na lateral esquerda e um pouco abaixo */
+.add-section {
+  position: absolute;
+  left: 20px;   /* Distância da lateral esquerda */
+  top: 60px;    /* Ajuste esse valor para posicionar verticalmente o botão */
+}
+
+.botaoAdicionar {
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botaoAdicionar:hover {
+  background-color: #218838;
+}
+
+.modal-adicionar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ccc;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  overflow-y: auto; /* Garante que o conteúdo tenha rolagem se necessário */
+}
+
+.modal-adicionar h2 {
+  color: #000; /* Título com cor diferenciada */
+  margin-bottom: 10px;
+}
+
+.modal-adicionar .form-group label {
+  color: #000; /* Cor dos rótulos (labels) */
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-adicionar .form-group input {
+  background-color: #ccc; /* Fundo dos inputs */
+  color: #000;            /* Cor do texto dos inputs */
+  border: 1px solid #000;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.modal-adicionar .buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  
+}
+
+.modal-adicionar .buttons .edit {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+}
+
+.modal-adicionar .buttons .edit:hover {
+  background-color: #45a049; /* Verde um pouco mais escuro no hover */
+}
+
+.modal-adicionar .buttons .cancel {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  
+  transition: background-color 0.3s ease;
+}
+
+.modal-adicionar .buttons .cancel:hover {
+  background-color: #d32f2f; /* Um vermelho mais escuro para o hover */
+}
+
+/* Estilos do Modal */
+.botaoEditar {
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 30%; /* Ajuste para centralizar melhor */
+  text-align: center;
+}
+
+.botaoEditar:hover {
+  background-color: #218838; /* Verde para o hover */
+}
+
+/* Modal de Edição */
+.modal-editar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ccc;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  overflow-y: auto; 
+}
+
+.modal-editar h2 {
+  color: #000; /* Título com cor diferenciada */
+  margin-bottom: 10px;
+}
+
+.modal-editar .form-group label {
+  color: #000; /* Cor dos rótulos (labels) */
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-editar .form-group input {
+  background-color: #ccc; /* Fundo dos inputs */
+  color: #000;            /* Cor do texto dos inputs */
+  border: 1px solid #000;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.modal-editar .buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-editar .buttons .edit {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.modal-editar .buttons .edit:hover {
+  background-color: #45a049; /* Verde mais escuro no hover */
+}
+
+.modal-editar .buttons .cancel {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-editar .buttons .cancel:hover {
+  background-color: #d32f2f; /* Vermelho mais escuro no hover */
+}
+
+.success-message {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  z-index: 10002; /* Certifique-se de que a mensagem está acima de tudo */
+  position: relative; /* Garante que a mensagem seja posicionada corretamente */
+  width: 100%;
+  margin-bottom: 20px; /* Adiciona margem inferior para evitar sobreposição */
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 128, 0, 0.9);
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
