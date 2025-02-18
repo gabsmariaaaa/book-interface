@@ -7,6 +7,7 @@ export const getLivros = async () => {
 };
 
 export const adicionarLivro = async (novoLivro) => {
+  return await axios.post(`${API_BASE_URL}/livros`, novoLivro);
 };
 
 export const atualizarLivro = async (id, livroAtualizado) => {
