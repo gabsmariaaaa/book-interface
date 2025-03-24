@@ -1,8 +1,25 @@
-# React + Vite
+# Book Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O Book Interface é o front-end da aplicação [Book API](https://github.com/gabsmariaaaa/api-book) um sistema de gerenciamento de livros com operações CRUD (Create, Read, Update, Delete).
 
-Currently, two official plugins are available:
+Desenvolvido com React, JavaScript, HTML e CSS, este projeto permite:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Visualizar a lista de livros cadastrados
+
+✅ Adicionar novos livros
+
+✅ Editar informações dos livros existentes
+
+✅ Remover livros do acervo
+
+Este projeto representa minha primeira experiência prática em desenvolvimento web, integrando um front-end dinâmico com uma API back-end. 🚀 
+
+##Tecnologias usadas: 
+
+*Linguagem*: JavaScript
+
+*Biblioteca*: React
+
+*Estilização*: CSS
+
+*Ferramenta*: HTML 
