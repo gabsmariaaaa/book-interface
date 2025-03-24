@@ -1,6 +1,6 @@
 # 🎨 Book Interface
 
-##📖 Sobre o projeto:
+## 📖 Sobre o projeto:
 O Book Interface é o front-end da aplicação [Book API](https://github.com/gabsmariaaaa/api-book) um sistema de gerenciamento de livros com operações CRUD (Create, Read, Update, Delete).
 
 Desenvolvido com React, JavaScript, HTML e CSS, este projeto permite:
@@ -15,7 +15,7 @@ Desenvolvido com React, JavaScript, HTML e CSS, este projeto permite:
 
 Este projeto representa minha primeira experiência prática em desenvolvimento web, integrando um front-end dinâmico com uma API back-end. 🚀 
 
-##🚀 Tecnologias usadas: 
+## 🚀 Tecnologias usadas: 
 
 *Linguagem*: JavaScript
 
@@ -25,7 +25,7 @@ Este projeto representa minha primeira experiência prática em desenvolvimento 
 
 *Ferramenta*: HTML 
 
-##🔗 Integração com API:
+## 🔗 Integração com API:
 
 O Book Interface consome os dados do back-end [Book API](https://github.com/gabsmariaaaa/api-book) , que foi desenvolvido em C# com ASP.NET Core 5. 
 
